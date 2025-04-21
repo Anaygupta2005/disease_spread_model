@@ -1,27 +1,29 @@
-# Spread of Disease Simulator (MATLAB)
+# Spread of Disease Simulator (MATLAB)  
+## A Martian Epidemiology Study Inspired by H.G. Wells
 
-This project implements a simplified **agent-based model** of disease transmission using MATLAB. It simulates the spread of an infection through a population over a fixed number of days and across multiple simulation runs. Each agent in the population has individual health status and interacts randomly with others, allowing for realistic, emergent patterns of disease progression.
+This project implements a simplified **agent-based disease spread model** in MATLAB. But here's the twist: it's framed as a fictional epidemiological study on **Martians**, inspired by H.G. Wells' *The War of the Worlds*.
+
+It simulates how an unknown Earth-borne pathogen spreads through a closed Martian population over time. This makes it both a technically sound model of stochastic disease dynamics and a creative educational tool for exploring epidemic behavior in novel contexts.
 
 ## Overview
 
-The simulation categorizes individuals into four groups:
-- **NI**: Infected (incubating, not yet contagious)
-- **NC**: Contagious (actively spreading the disease)
-- **NHI**: Healthy but immune (recovered)
-- **NH**: Healthy and not immune
+Each Martian is classified daily as:
+- **NI**: Infected (in incubation)
+- **NC**: Contagious (actively spreading)
+- **NHI**: Healthy but Immune (recovered)
+- **NH**: Healthy with No Immunity (vulnerable)
 
-Over time, individuals transition between states based on incubation, contagiousness, and immunity periods defined using random intervals. The model assumes random daily interactions between agents and simulates disease transmission accordingly.
+These states evolve based on random interactions, incubation durations, contagious periods, and immunity windows. Immunity fades with time, allowing reinfection—echoing themes of vulnerability and decay central to H.G. Wells' original narrative.
 
 ## Features
 
-- Stochastic simulation with individual-level tracking
-- Incubation and recuperation periods vary per person
-- Immunity wanes over time, allowing reinfection
-- Multiple simulation runs for statistical robustness
+- Stochastic simulation using individual agent tracking
+- Variable-length incubation, contagiousness, and immunity
+- Immunity decay and reinfection possible
+- Multiple simulation runs to visualize variability
+- Visualizations and tables showing disease progression over time
 
-## Parameters
-
-The function takes the following input arguments:
+## Martian Disease Model Parameters
 
 ```matlab
 Results = SpreadOfDisease(N, a1, a2, b1, b2, c1, c2, DT_bar, NHo, NIo, NCo, NHIo, ND, NSIM)
